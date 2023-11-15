@@ -34,6 +34,6 @@ namespace FirstNetworkApp_16_11_2023
             client.Send(Encoding.ASCII.GetBytes(message));
             Console.WriteLine($"отправлено сообщение {message}");
             Console.ReadLine();
-        }
+        } 
     }
 }
