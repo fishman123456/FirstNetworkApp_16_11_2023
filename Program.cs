@@ -15,7 +15,7 @@ namespace FirstNetworkApp_16_11_2023
             // 0 конфигурация сервера
             string serverIpStr = "25.45.70.14"; // ip адрес сокета сервера
             int serverPort = 2620; // порт сокета сервера
-            // 1 подготовить endpoint для работы сервера (
+            // 1 подготовить endpoint для работы сервера 
             IPAddress serverIp = IPAddress.Parse(serverIpStr);
             IPEndPoint serverEndpoint = new IPEndPoint(serverIp, serverPort);
             // 2 создать сокет сервера и присоединить его к endpoint
