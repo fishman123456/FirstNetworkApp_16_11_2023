@@ -1,0 +1,7 @@
+C:\Users\Fishman_1\Documents\GitHub\FirstNetworkApp_16_11_2023\bin\Debug\FirstNetworkApp_16_11_2023.exe.config
+C:\Users\Fishman_1\Documents\GitHub\FirstNetworkApp_16_11_2023\bin\Debug\FirstNetworkApp_16_11_2023.exe
+C:\Users\Fishman_1\Documents\GitHub\FirstNetworkApp_16_11_2023\bin\Debug\FirstNetworkApp_16_11_2023.pdb
+C:\Users\Fishman_1\Documents\GitHub\FirstNetworkApp_16_11_2023\obj\Debug\FirstNetworkApp_16_11_2023.csproj.AssemblyReference.cache
+C:\Users\Fishman_1\Documents\GitHub\FirstNetworkApp_16_11_2023\obj\Debug\FirstNetworkApp_16_11_2023.csproj.CoreCompileInputs.cache
+C:\Users\Fishman_1\Documents\GitHub\FirstNetworkApp_16_11_2023\obj\Debug\FirstNetworkApp_16_11_2023.exe
+C:\Users\Fishman_1\Documents\GitHub\FirstNetworkApp_16_11_2023\obj\Debug\FirstNetworkApp_16_11_2023.pdb
