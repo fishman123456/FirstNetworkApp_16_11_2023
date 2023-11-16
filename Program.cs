@@ -46,11 +46,17 @@ namespace FirstNetworkApp_16_11_2023
                 string message = $"Вы подключились, время подключения {DateTime.Now}";
                 client.Send(Encoding.UTF8.GetBytes(message));
                 Console.WriteLine($"server> отправлено сообщение {message}");
+
                 // 5.2  получить сообщение от клиента
                 byte[] buffer = new byte[1024];
                 int bytesRead = client.Receive(buffer);
-                message = Encoding.UTF8.GetString(buffer,0,bytesRead);
+                message = Encoding.UTF8.GetString(buffer, 0, bytesRead);
                 Console.WriteLine($"server> получено сообщение   {message}");
+
+                // сервер отправляет клиенту сообщение Goodbye
+                message = "Goodbye";
+                client.Send(Encoding.UTF8.GetBytes(message));
+                Console.WriteLine($"server> отправлено сообщение {message}");
 
                 Console.WriteLine("server>Завершение работы сервера...");
                 // завершение работы склиента
@@ -89,15 +95,19 @@ namespace FirstNetworkApp_16_11_2023
                 Console.WriteLine("client>Подключение к серверу...");
                 client.Connect(serverEndpoint);
                 Console.WriteLine($"client>Произошло подключение ...{client.LocalEndPoint}-> {client.RemoteEndPoint}");
-                
-                // 4.1 получить сообщение от сервера
-                byte[]buffer = new byte[1024]; // буфер для чтения сообщения
-                int byteRead = client.Receive(buffer); // читам сообщения в буфер, результат кол-во байт
-                string message = Encoding.UTF8.GetString(buffer,0,byteRead); // декодируем байты в строку
 
-                // 4.2 отправить сообщение серверу
+                // 4.1 получить сообщение от сервера
+                byte[] buffer = new byte[1024]; // буфер для чтения сообщения
+                int byteRead = client.Receive(buffer); // читам сообщения в буфер, результат кол-во байт
+                string message = Encoding.UTF8.GetString(buffer, 0, byteRead); // декодируем байты в строку
+
                 message = "Отлично, работаем дальше";
                 client.Send(Encoding.UTF8.GetBytes((string)message));
+
+                // 4.n получить сообщение от сервера
+                buffer = new byte[1024]; // буфер для чтения сообщения
+                byteRead = client.Receive(buffer); // читам сообщения в буфер, результат кол-во байт
+                message = Encoding.UTF8.GetString(buffer, 0, byteRead); // декодируем байты в строку
 
                 Console.WriteLine($"получено сообщение {message}");
                 Console.WriteLine("client>Завершение работы клиента...");
